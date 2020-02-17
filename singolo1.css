@@ -1,0 +1,264 @@
+@import url(/font.css);
+
+body {
+    margin: 0;
+}
+
+.wrapper {
+    width: 1020px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    height: 89px;
+    align-items: center;
+
+    background-color: rgb(45, 48, 58) ;
+
+    text-transform: uppercase;
+    font-family: "LatoLight";
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    margin: 0px 0 2px 40px;
+}
+
+.logo h1 {
+    display: flex;
+    margin: 0;
+
+    font-size: 25px;
+    color: #ffffff;
+}
+
+.logo p {
+    display: flex;
+    margin: 0 0 -3px -2px;
+
+    font-size: 32px;
+    font-weight: 900;
+    color: rgb(214, 100, 94);
+}
+
+.menu {
+     width: 820px;
+     padding-right: 38px;
+     padding-top: 3px;
+
+}
+
+.menu ul {
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.menu li {
+    list-style-type: none;
+}
+
+.menu li a {
+    font-size: 12px;
+    text-decoration: none;
+    
+}
+
+.point {
+    margin-left: 13px;
+    
+    color: #ffffff;
+}
+
+.point::before {
+    display: inline-block;
+    width: 1px;
+    height: 1px;
+    margin: 0 14px 1px 0px;
+    
+    background-color: #494e62;
+    
+    border: 1px solid #494e62;
+    border-radius: 50%;
+    content: ""
+    
+}
+
+.point:hover {
+    color: rgb(214, 100, 94);
+    transition: all .2s ease-in-out;
+}
+
+.menu_home {
+
+    color: rgb(214, 100, 94);
+}
+
+.menu_home:hover {
+    text-decoration:underline ;
+    
+}
+
+.header_line {
+    background-color: #323746 ;
+    height: 6px;
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    
+    width: 1020px;
+    height: 593px;
+
+    background-color: #f06c64 ;
+}
+
+.slider_left {
+    margin-left: 42px;
+}
+.slider_left img, 
+.slider_right img {
+    opacity: 0.5;
+    cursor: pointer;
+}
+.slider_left img:hover,
+.slider_right img:hover{
+    opacity: 1;
+}
+.slider_right {
+    position: relative;
+    left: 445px;
+}
+
+.slider_zone_vertical {
+    position: relative;
+    top: -133px;
+    left: 54px;
+}
+
+.iphone_shadow {
+    position: absolute;
+    
+}
+
+.iphone_box {
+    position: absolute;
+    left: -2px;
+    top: -1px;
+}
+
+.iphone_picture {
+    position: absolute;
+    top: 62px;
+    left: 11px
+}
+
+.slider_zone_horizontal {
+    position: relative;
+    left: 368px;
+    top: -12px;
+}
+
+.iphone_box_hor {
+    position: relative;
+    left: -2px;
+    top: -1px;;
+    
+}
+
+.iphone_picture_hor {
+    position: absolute;
+    left: 56px;
+    top: 11px;
+}
+
+.slider_line {
+    height: 7px ;
+    background-color: #ea676b;
+}
+
+.wrapper_color{
+    background-color: #f2f2f2;
+    width: 1020px;
+}
+
+.wrapper_services {
+    background-color: #f2f2f2;
+    width: 940px;
+    margin: 0 auto;
+}
+
+.services  {
+    padding-top: 34px;
+}
+
+.services h2 {
+    font-size: 30px;
+    font-family: "LatoRegular";
+    letter-spacing: 0.01em;
+    margin-bottom: 18px;
+
+    color: #666d89 ;
+}
+
+.services p {
+    font-size: 18px;
+    font-family: "LatoRegular";
+    letter-spacing: -0.004em;
+    line-height: 30px;
+
+    color: #868da9;
+}
+
+.serv_list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1000px;
+}
+
+.serv_item {
+    margin-right: 20px;
+    margin-bottom: -8px;
+
+    display: flex;
+    width: 300px;
+    align-items: center;
+}
+
+.serv_item_pic {
+    margin-top: -10px;
+}
+
+.serv_item_text {
+    margin-top: 6px;
+    margin-left: 18px;
+}
+.serv_item_text h3 {
+    margin-bottom: 0px;
+    
+    font-size: 18px;
+    font-family: "LatoRegular";
+    color: #666d89 ;
+}
+
+.serv_item_text p {
+    margin-top: 10px;
+    overflow: hidden;
+    max-height: 200px;
+
+    font-size: 12px;
+    line-height: 21px;
+    text-align: justify;
+    font-family: "LatoRegular";
+    text-overflow: clip;
+    
+    color: #868da9;
+}
+
+footer {
+    height: 65px;
+}
