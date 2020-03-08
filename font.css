@@ -1,9 +1,14 @@
 @font-face {
     font-family: "LatoLight";
-    src: url("/assets/Lato-Light.ttf");
+    src: url("/singolo//assets/Lato-Light.ttf");
 }
 
 @font-face {
     font-family: "LatoRegular";
-    src: url("/assets/Lato-Regular.ttf");
+    src: url("/singolo/assets/Lato-Regular.ttf");
+}
+
+@font-face {
+    font-family: "LatoBlack";
+    src: url("/singolo/assets/Lato-Black.ttf")
 }
