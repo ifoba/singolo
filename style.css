@@ -479,7 +479,12 @@ form {
 
 form p {
     margin-top: 10px;
+    
 
+}
+
+form p input {
+    cursor: pointer;
 }
 .info_area input{
     height: 36px; 
