@@ -65,6 +65,21 @@ header {
     
 }
 
+li:first-child .point::before {
+    display: none;
+}
+
+#menu a.active {
+    color: rgb(214, 100, 94);
+    cursor: default;
+}
+
+#menu a:not(.active):hover {
+    cursor: pointer;
+    color: rgb(214, 100, 94);
+    transition: all .2s ease-in-out;
+}
+
 .point {
     margin-left: 13px;
     
@@ -85,11 +100,11 @@ header {
     
 }
 
-.point:hover {
+/*.point:hover {
     color: rgb(214, 100, 94);
     transition: all .2s ease-in-out;
 }
-
+*/
 .menu_home {
 
     color: rgb(214, 100, 94);
@@ -139,17 +154,20 @@ header {
 }
 
 .iphone_shadow {
+    
     position: absolute;
     
 }
 
 .iphone_box {
+    cursor: pointer;
     position: absolute;
     left: -2px;
     top: -1px;
 }
 
 .iphone_picture {
+    cursor: pointer;
     position: absolute;
     top: 62px;
     left: 11px
@@ -162,6 +180,7 @@ header {
 }
 
 .iphone_box_hor {
+    cursor: pointer;
     position: relative;
     left: -2px;
     top: -1px;;
@@ -169,6 +188,7 @@ header {
 }
 
 .iphone_picture_hor {
+    cursor: pointer;
     position: absolute;
     left: 56px;
     top: 11px;
@@ -304,7 +324,7 @@ nav ul {
     padding: 0;
     margin-top: 16px;
 }
-nav ul a {
+#tabs a {
     margin-right: 10px;
     padding: 5px 6px 4px 7px;
 
@@ -320,9 +340,16 @@ nav ul a {
     
 }
 
-nav ul a:hover {
+#tabs a.lightning {
     color:#c5c5c5;
     border: 1px solid #c5c5c5;
+    cursor: default;
+}
+
+#tabs a:not(.lightning):hover {
+    color:#c5c5c5;
+    border: 1px solid #c5c5c5;
+    cursor: pointer;
 }
 
 .main_img {
@@ -331,12 +358,22 @@ nav ul a:hover {
     flex-direction: row;
     width: 980px;
     align-content: space-between;
-    margin-left:40px ;
+    margin-left:30px ;
     padding-bottom: 53px;
 }
 
-.main_img img {
-    padding: 0 20px 20px 0;
+
+
+
+#random img {
+   /*margin: 0 20px 20px 0;*/
+   margin: 10px;
+}
+
+
+.imgBorder {
+    margin: 5px !important;
+    border: 5px solid #F06C64;
 }
 
 .wrapper_about {

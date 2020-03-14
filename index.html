@@ -9,18 +9,18 @@
 </head>
 <body>
     <div class="wrapper">
-        <header>
+        <header id="home">
             <div class="logo">
                 <h1>singolo</h1>
                 <p>*</p>
             </div>
-            <div class="menu">
+            <div id="menu" class="menu">
                 <ul>
-                    <li><a class="menu_home" href="#">home</a></li>
-                    <li><a class="point" href="#">services</a></li>
-                    <li><a class="point" href="#">portfolio</a></li>
-                    <li><a class="point" href="#">about</a></li>
-                    <li><a class="point" href="#">contact</a></li>
+                    <li><a class='point active' href="#home">home</a></li>
+                    <li><a class="point" href="#servis">services</a></li>
+                    <li><a class="point" href="#portfolio">portfolio</a></li>
+                    <li><a class="point" href="#about">about</a></li>
+                    <li><a class="point" href="#contact">contact</a></li>
                 </ul>
             </div>
         </header>
@@ -30,15 +30,15 @@
                 <img src="./assets/left-button.png" alt="slider left button"> 
             </div>
             <div class="slider_zone">
-                <div class="slider_zone_vertical">
+                <div id="vertical" class="slider_zone_vertical">
                     <img src="./assets/Shadow-vert.svg" alt="" class="iphone_shadow">
                     <img src="./assets/Cam-ver.png" alt="" class="iphone_box">
-                    <img src="./assets/Layer 6.png" alt="" class="iphone_picture">
+                    <img id="verScreen" src="./assets/Layer 6.png" alt="" class="iphone_picture">
                 </div>
-                <div class="slider_zone_horizontal">
+                <div id="horisontal" class="slider_zone_horizontal">
                     <img src="./assets/Shadow-hor.svg" alt="" class="iphone_shadow">
                     <img src="./assets/Cam-hor.png" alt="" class="iphone_box_hor">
-                    <img src="./assets/Layer 5.png" alt="" class="iphone_picture_hor">
+                    <img id="horScreen" src="./assets/Layer 5.png" alt="" class="iphone_picture_hor">
                 </div>
             </div>
             <div class="slider_right">
@@ -48,7 +48,7 @@
         <div class="slider_line"></div>
         
         <div class="wrapper_color">
-            <div class="wrapper_services">
+            <div id="servis" class="wrapper_services">
                 <div class="services">
                     <h2>Our Services</h2>
                     <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
@@ -111,18 +111,18 @@
             </div>
         </div>
     </div>
-    <div class="wrapper_main">
+    <div id="portfolio" class="wrapper_main">
         <div class="wrapper_main_header">
             <h2>Portfolio</h2>
             <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-            <nav>
-                <ul><a href="#">All</a></ul>
-                <ul><a href="#">Web Design</a></ul>
-                <ul><a href="#">Graphic Design</a></ul>
-                <ul><a href="#">Artwork</a></ul>
+            <nav id="tabs">
+                <ul><a href="#portfolio">All</a></ul>
+                <ul><a href="#portfolio">Web Design</a></ul>
+                <ul><a href="#portfolio">Graphic Design</a></ul>
+                <ul><a href="#portfolio">Artwork</a></ul>
             </nav>
         </div>
-        <div class="main_img">
+        <div id="random" class="main_img">
             <img src="./assets/row1/1.jpg" alt="project">
             <img src="./assets/row1/2.jpg" alt="project">
             <img src="./assets/row1/3.jpg" alt="project">
@@ -137,7 +137,7 @@
             <img src="./assets/row3/4.jpg" alt="project">
         </div>
     </div>
-    <div class="wrapper_about">
+    <div id="about" class="wrapper_about">
         <div class="wrapper_about_container">
             <h2>About Us</h2>
             <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat 
@@ -185,7 +185,7 @@
             </div>
         </div>
     </div>
-    <div class="wrapper_footer">
+    <div id="contact" class="wrapper_footer">
         <h2>Get a Quote</h2>
         <p class="txtblock">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
              Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -222,6 +222,6 @@
         </footer>
 
     </div>
-    
+    <script src="/singolo/script.js"></script>
 </body>
 </html>
