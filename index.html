@@ -8,6 +8,14 @@
     <link href="/singolo/font.css" rel='stylesheet'>
 </head>
 <body>
+    <div id="msg" class="message hide">
+        <div class="message-area">
+            <p>Письмо отправлено</p>
+            <p id="resultTheme"></p>
+            <p id="resultMessage"></p>
+            <button id="close">Ok</button>
+        </div>
+    </div>
     <div class="wrapper">
         <header id="home">
             <div class="logo">
@@ -26,20 +34,26 @@
         </header>
         <div class="header_line"></div>
         <div class="slider">
+            
+            <div class="slider-container">
+                <div class="sliderItem active">
+                    <div id="vertical" class="slider_zone_vertical">
+                        <img src="./assets/Shadow-vert.svg" alt="" class="iphone_shadow">
+                        <img src="./assets/Cam-ver.png" alt="" class="iphone_box">
+                        <img id="verScreen" src="./assets/Layer 6.png" alt="" class="iphone_picture">
+                    </div>
+                    <div id="horisontal" class="slider_zone_horizontal">
+                        <img src="./assets/Shadow-hor.svg" alt="" class="iphone_shadow">
+                        <img src="./assets/Cam-hor.png" alt="" class="iphone_box_hor">
+                        <img id="horScreen" src="./assets/Layer 5.png" alt="" class="iphone_picture_hor">
+                    </div>
+                </div>
+                <div class="sliderItem">
+                    <img src="/singolo/assets/Slider.png" alt="">
+                </div>
+            </div>
             <div class="slider_left">
                 <img src="./assets/left-button.png" alt="slider left button"> 
-            </div>
-            <div class="slider_zone">
-                <div id="vertical" class="slider_zone_vertical">
-                    <img src="./assets/Shadow-vert.svg" alt="" class="iphone_shadow">
-                    <img src="./assets/Cam-ver.png" alt="" class="iphone_box">
-                    <img id="verScreen" src="./assets/Layer 6.png" alt="" class="iphone_picture">
-                </div>
-                <div id="horisontal" class="slider_zone_horizontal">
-                    <img src="./assets/Shadow-hor.svg" alt="" class="iphone_shadow">
-                    <img src="./assets/Cam-hor.png" alt="" class="iphone_box_hor">
-                    <img id="horScreen" src="./assets/Layer 5.png" alt="" class="iphone_picture_hor">
-                </div>
             </div>
             <div class="slider_right">
                 <img src="./assets/right-button.png" alt="slider right button"> 
@@ -185,20 +199,23 @@
             </div>
         </div>
     </div>
+    
     <div id="contact" class="wrapper_footer">
+        
         <h2>Get a Quote</h2>
         <p class="txtblock">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
              Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
         <div class="info">
             <div class="info_area">
                 <form action="">
-                    <input type="text" placeholder="Name (Required)" name="author" pattern="[a-zA-Z]+">
-                    <input type="text" placeholder="Email (Required)" name="email">
-                    <input type="text" placeholder="Subject" name="subject" >
+                    <input  type="text" placeholder="Name (Required)" name="author" pattern="[a-zA-Z]+" required>
+                    <input  type="text" placeholder="Email (Required)" name="email" required>
+                    <input id="theme" type="text" placeholder="Subject" name="subject" >
                     <textarea placeholder="Describe your project in detail..." name="txtarea" id="textarea" cols="45" rows="10"></textarea>
-                    <p><input type="submit" value="Submit" id="submit"></p>
+                    <p><input type="button" value="Submit" id="submit"></p>
                 </form>
             </div>
+            
             <div class="info_txt">
                 <h3>Contact Information</h3>
                 <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.
@@ -222,6 +239,7 @@
         </footer>
 
     </div>
+    
     <script src="/singolo/script.js"></script>
 </body>
 </html>
