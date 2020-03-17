@@ -381,24 +381,28 @@ li:first-child .point::before {
     color:#666d89;
 }
 
-nav {
+nav ul {
     display: flex;
-
+    padding-left: 0;
     padding-bottom: 6px;
-
+    
     
 }
 
-nav ul {
+nav ul li {
+    margin-right: 10px;
     padding: 0;
     margin-top: 16px;
+    list-style: none;
+    font-weight: 900;
+
 }
 #tabs a {
-    margin-right: 10px;
+    
     padding: 5px 6px 4px 7px;
 
     font-family: "LatoLight";
-    font-size: 9px;
+    font-size: 10px;
     letter-spacing: 0.17em;
     text-decoration: none;
     color:#666d89;
@@ -435,10 +439,12 @@ nav ul {
 
 
 #random img {
-   /*margin: 0 20px 20px 0;*/
    margin: 10px;
 }
 
+#random img:hover {
+    cursor: pointer;
+ }
 
 .imgBorder {
     margin: 5px !important;

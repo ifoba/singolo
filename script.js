@@ -21,14 +21,24 @@ function getRandom() {
   
 
 tabs.addEventListener('click', (event)=> {
+    if ((event.target.tagName == 'LI' || event.target.tagName == 'A') && event.target.classList.value !== 'lightning' ) { 
     tabs.querySelectorAll('a').forEach(el=>el.classList.remove('lightning'));
     event.target.classList.add('lightning');
-    random.querySelectorAll('img').forEach(el=> el.style.order = rnd())
+    random.querySelectorAll('img').forEach(el=> el.style.order = rnd());
+    random.querySelectorAll('img').forEach(el=>el.classList.remove('imgBorder'));
+    console.log(event.target.classList.value)
+    }
 });
 
 random.addEventListener('click', (event)=>{
-    random.querySelectorAll('img').forEach(el=>el.classList.remove('imgBorder'))
-    event.target.classList.add('imgBorder')
+    random.querySelectorAll('img').forEach(el=>el.classList.remove('imgBorder'));
+    if (event.target.tagName == 'IMG') {
+         
+        event.target.classList.add('imgBorder');
+    }
+    
+    
+    
 })
 
 // iphone click
