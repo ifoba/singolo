@@ -751,18 +751,49 @@ footer p {
     top: 30%;
     margin: 0 auto;
 
-    border: 1px solid #ffffff;
-    border-radius: 15% ;
+   /*  border: 1px solid #ffffff;
+    border-radius: 15%  */;
     opacity: 1;
     color: #ffffff;
     font-size: 20px;
-    background-image: url('https://images-na.ssl-images-amazon.com/images/I/81-yKbVND-L._SY355_.png');
+    
     
     
 }
 
-.message-area button {
-    width: 30%;
+.message-area img {
+    position: absolute;
+    border-radius: 15%;
+}
+
+.message-area p {
+    margin: 10 auto;
+    position: relative;
+    width: 80%;
+    max-height: 25%;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    text-align: center;
+    
     
 }
+
+.message-area p:nth-child(4) {
+    overflow: auto;
+}
+
+
+.message-area button {
+    width: 30%;
+    position: relative;
+    
+}
+
+#result-message {
+    width: 50%;
+}
+
+
+
+
 
