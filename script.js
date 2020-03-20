@@ -1,70 +1,47 @@
-// header
+// HEADER
 const menu = document.getElementById('menu');
 
 
 menu.addEventListener('click', (event)=> {
+    event.preventDefault();
     menu.querySelectorAll('a').forEach(el=>el.classList.remove('active'));
     event.target.classList.add('active');
+    console.log(event.target.innerHTML)
+    document.getElementById(event.target.innerHTML).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    })
 });
 
-// portfolio
+const anchor = document.querySelectorAll('a[href^="#"]');
 
-const tabs = document.getElementById('tabs');
-const random = document.getElementById('random');
-
-function getRandom() {
-    return Math.random();
-  }
-  function rnd () {
-      return Math.ceil(getRandom()*100);
-  }
-  
-
-tabs.addEventListener('click', (event)=> {
-    if ((event.target.tagName == 'LI' || event.target.tagName == 'A') && event.target.classList.value !== 'lightning' ) { 
-    tabs.querySelectorAll('a').forEach(el=>el.classList.remove('lightning'));
-    event.target.classList.add('lightning');
-    random.querySelectorAll('img').forEach(el=> el.style.order = rnd());
-    random.querySelectorAll('img').forEach(el=>el.classList.remove('imgBorder'));
-    console.log(event.target.classList.value)
+window.addEventListener('scroll', () => {
+    console.log(pageYOffset)
+    if (pageYOffset < 600) { /* services */
+        menu.querySelectorAll('a').forEach(el=>el.classList.remove('active'));
+        anchor[0].classList.add('active');
     }
-});
-
-random.addEventListener('click', (event)=>{
-    random.querySelectorAll('img').forEach(el=>el.classList.remove('imgBorder'));
-    if (event.target.tagName == 'IMG') {
-         
-        event.target.classList.add('imgBorder');
+    if (pageYOffset > 600) { /* services */
+        menu.querySelectorAll('a').forEach(el=>el.classList.remove('active'));
+        anchor[1].classList.add('active');
     }
+    if (pageYOffset > 1050) { /* portfolio */
+        menu.querySelectorAll('a').forEach(el=>el.classList.remove('active'));
+        anchor[2].classList.add('active');
+    }
+    if (pageYOffset > 1900) { /* about */    
+        menu.querySelectorAll('a').forEach(el=>el.classList.remove('active'));
+        anchor[3].classList.add('active');
+    }
+    if (pageYOffset > 2500) {
+        menu.querySelectorAll('a').forEach(el=>el.classList.remove('active'));
+        anchor[4].classList.add('active');
+    }
+
     
-    
-    
-})
-
-// iphone click
-const vertical = document.getElementById('vertical');
-const horizontal = document.getElementById('horisontal');
-
-let countScreenVertical = 0;
-vertical.addEventListener('click', ()=>{
-    if (countScreenVertical%2==0){
-        verScreen.style.display="none";
-    }
-    else
-    verScreen.style.display="block";
-    countScreenVertical++
-});
-let countScreenHorizontal = 0;
-horizontal.addEventListener('click', ()=>{
-    if (countScreenHorizontal%2==0){
-        horScreen.style.display="none";
-    }
-    else
-    horScreen.style.display="block";
-    countScreenHorizontal++
 });
 
-//slider
+//SLIDER
 let items = document.querySelectorAll('.sliderItem');
 
 let currentItem = 0;
@@ -120,13 +97,76 @@ document.querySelector('.slider_right').addEventListener('click', function() {
     
 });
 
-// forma
+// IPHONE CLICK
+const vertical = document.getElementById('vertical');
+const horizontal = document.getElementById('horisontal');
+
+let countScreenVertical = 0;
+vertical.addEventListener('click', ()=>{
+    if (countScreenVertical%2==0){
+        verScreen.style.display="none";
+    }
+    else
+    verScreen.style.display="block";
+    countScreenVertical++
+});
+let countScreenHorizontal = 0;
+horizontal.addEventListener('click', ()=>{
+    if (countScreenHorizontal%2==0){
+        horScreen.style.display="none";
+    }
+    else
+    horScreen.style.display="block";
+    countScreenHorizontal++
+});
+
+
+// PORTFOLIO
+
+const tabs = document.getElementById('tabs');
+const random = document.getElementById('random');
+
+function getRandom() {
+    return Math.random();
+  }
+  function rnd () {
+      return Math.ceil(getRandom()*100);
+  }
+  
+
+tabs.addEventListener('click', (event)=> {
+    event.preventDefault();
+    if ((event.target.tagName == 'LI' || event.target.tagName == 'A') && event.target.classList.value !== 'lightning' ) { 
+    tabs.querySelectorAll('a').forEach(el=>el.classList.remove('lightning'));
+    event.target.classList.add('lightning');
+    random.querySelectorAll('img').forEach(el=> el.style.order = rnd());
+    random.querySelectorAll('img').forEach(el=>el.classList.remove('imgBorder'));
+    console.log(event.target.classList.value)
+    }
+});
+
+random.addEventListener('click', (event)=>{
+    random.querySelectorAll('img').forEach(el=>el.classList.remove('imgBorder'));
+    if (event.target.tagName == 'IMG') {
+         
+        event.target.classList.add('imgBorder');
+    }
+    
+    
+    
+})
+
+
+
+// FORMA
 const btn = document.getElementById('submit');
 const cls = document.getElementById('close');
-
-btn.addEventListener('click', ()=>{
+const from = document.getElementById('form');
+from.addEventListener('submit', ()=>{
+    event.preventDefault();
     let theme = document.getElementById('theme').value.toString();
     let message = document.getElementById('textarea').value.toString();
+    
     if (theme == '') {
         document.getElementById('resultTheme').innerText = 'Без темы';
     }
@@ -140,10 +180,11 @@ btn.addEventListener('click', ()=>{
         document.getElementById('resultMessage').innerText = 'Описание: ' + message;
     }
     document.getElementById('msg').classList.remove('hide');
+})
 
 
-});
 
 cls.addEventListener('click', ()=>{
     document.getElementById('msg').classList.add('hide');
+    from.reset();
 });

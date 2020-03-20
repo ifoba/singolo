@@ -18,7 +18,7 @@
         </div>
     </div>
     <div class="wrapper">
-        <header id="home">
+        <header>
             <div class="logo">
                 <h1>singolo</h1>
                 <p>*</p>
@@ -26,17 +26,17 @@
             <div id="menu" class="menu">
                 <ul>
                     <li><a class='point active' href="#home">home</a></li>
-                    <li><a class="point" href="#servis">services</a></li>
+                    <li><a class="point" href="#services">services</a></li>
                     <li><a class="point" href="#portfolio">portfolio</a></li>
                     <li><a class="point" href="#about">about</a></li>
                     <li><a class="point" href="#contact">contact</a></li>
                 </ul>
             </div>
         </header>
-        <div class="header_line"></div>
+        <div id="home" class="header_line"></div>
         <div class="slider">
             
-            <div class="slider-container">
+            <div  class="slider-container">
                 <div class="sliderItem active">
                     <div id="vertical" class="slider_zone_vertical">
                         <img src="./assets/Shadow-vert.svg" alt="" class="iphone_shadow">
@@ -59,11 +59,12 @@
             <div class="slider_right">
                 <img src="./assets/right-button.png" alt="slider right button"> 
             </div>
+            <div id="services" class="anchorServ"></div>
         </div>
-        <div class="slider_line"></div>
+        <div  class="slider_line"></div>
         
         <div class="wrapper_color">
-            <div id="servis" class="wrapper_services">
+            <div  class="wrapper_services">
                 <div class="services">
                     <h2>Our Services</h2>
                     <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
@@ -122,11 +123,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="foot"></div>
+                <div id="portfolio" class="foot"></div>
             </div>
         </div>
     </div>
-    <div id="portfolio" class="wrapper_main">
+    <div  class="wrapper_main">
         <div class="wrapper_main_header">
             <h2>Portfolio</h2>
             <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
@@ -153,6 +154,7 @@
             <img src="./assets/row3/3.jpg" alt="project">
             <img src="./assets/row3/4.jpg" alt="project">
         </div>
+        <div id="about" class="anchorAbout"></div>
     </div>
     <div id="about" class="wrapper_about">
         <div class="wrapper_about_container">
@@ -210,12 +212,12 @@
              Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
         <div class="info">
             <div class="info_area">
-                <form action="">
+                <form action="" id="form">
                     <input  type="text" placeholder="Name (Required)" name="author" pattern="[a-zA-Z]+" required>
-                    <input  type="text" placeholder="Email (Required)" name="email" required>
+                    <input  type="email" placeholder="Email (Required)" name="email" required>
                     <input id="theme" type="text" placeholder="Subject" name="subject" >
                     <textarea placeholder="Describe your project in detail..." name="txtarea" id="textarea" cols="45" rows="10"></textarea>
-                    <p><input type="submit" onclick="event.preventDefault()" value="Submit" id="submit"></p>
+                    <p><input type="submit"  value="Submit" id="submit"></p>
                 </form>
             </div>
             
