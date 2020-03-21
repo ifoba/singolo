@@ -1,35 +1,45 @@
 // HEADER
 const menu = document.getElementById('menu');
 
+let status = false;
+
+function statusSign () {
+    status = false;
+}
 
 menu.addEventListener('click', (event)=> {
+
     event.preventDefault();
+    if(event.target.tagName == 'A') {
+    status = true;    
     menu.querySelectorAll('a').forEach(el=>el.classList.remove('active'));
     event.target.classList.add('active');
-    console.log(event.target.innerHTML)
+    
     document.getElementById(event.target.innerHTML).scrollIntoView({
         behavior: 'smooth',
         block: 'start'
     })
+    setTimeout( statusSign, 1000);}
+    else return;
 });
 
 const anchor = document.querySelectorAll('a[href^="#"]');
 
-window.addEventListener('scroll', () => {
-    console.log(pageYOffset)
+skrollinng = window.addEventListener('scroll', () => {
+    if (status) return;
     if (pageYOffset < 600) { /* services */
         menu.querySelectorAll('a').forEach(el=>el.classList.remove('active'));
         anchor[0].classList.add('active');
     }
-    if (pageYOffset > 600) { /* services */
+    if (pageYOffset > 600 && pageYOffset < 1000) { /* services */
         menu.querySelectorAll('a').forEach(el=>el.classList.remove('active'));
         anchor[1].classList.add('active');
     }
-    if (pageYOffset > 1050) { /* portfolio */
+    if (pageYOffset > 1050 && pageYOffset < 1850) { /* portfolio */
         menu.querySelectorAll('a').forEach(el=>el.classList.remove('active'));
         anchor[2].classList.add('active');
     }
-    if (pageYOffset > 1900) { /* about */    
+    if (pageYOffset > 1900 && pageYOffset < 2450) { /* about */    
         menu.querySelectorAll('a').forEach(el=>el.classList.remove('active'));
         anchor[3].classList.add('active');
     }
@@ -141,7 +151,7 @@ tabs.addEventListener('click', (event)=> {
     event.target.classList.add('lightning');
     random.querySelectorAll('img').forEach(el=> el.style.order = rnd());
     random.querySelectorAll('img').forEach(el=>el.classList.remove('imgBorder'));
-    console.log(event.target.classList.value)
+    
     }
 });
 
