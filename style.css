@@ -5,17 +5,21 @@ body {
 }
 
 .wrapper {
-    width: 1020px;
+    max-width: 1020px;
+    width: 100%;
     margin: 0 auto;
 }
 
 header {
     display: flex;
+    
     height: 89px;
-    width: 1020px;
+    width: 100%;
+    max-width: 1020px;
     align-items: center;
     position: fixed;
     z-index: 10;
+    justify-content: space-between;
     
 
     background-color: rgb(45, 48, 58) ;
@@ -49,7 +53,7 @@ header {
 }
 
 .menu {
-     width: 820px;
+     
      padding-right: 38px;
      padding-top: 3px;
 
@@ -71,7 +75,7 @@ header {
     
 }
 
-li:first-child .point::before {
+li:nth-child(2) .point::before {
     display: none;
 }
 
@@ -106,11 +110,7 @@ li:first-child .point::before {
     
 }
 
-/*.point:hover {
-    color: rgb(214, 100, 94);
-    transition: all .2s ease-in-out;
-}
-*/
+
 .menu_home {
 
     color: rgb(214, 100, 94);
@@ -121,7 +121,13 @@ li:first-child .point::before {
     
 }
 
+#burger {
+    display: none;
+}
+
 .header_line {
+    width: 100%;
+    max-width: 1020px;
     background-color: #323746 ;
     height: 6px;
     padding: 90px 0 0 0;
@@ -132,7 +138,8 @@ li:first-child .point::before {
     align-items: center;
     position: relative;
     z-index: 1;
-    width: 1020px;
+    width: 100%;
+    max-width: 1020px;
     height: 593px;
     overflow: hidden;
     
@@ -141,6 +148,7 @@ li:first-child .point::before {
 
 .slider-container {
     width: 100%;
+    max-width: 1020px;
     
 }
 
@@ -269,13 +277,16 @@ li:first-child .point::before {
 }
 
 .slider_line {
+    width: 100%;
+    max-width: 1020px;
     height: 7px ;
     background-color: #ea676b;
 }
 
 .wrapper_color{
     background-color: #f2f2f2;
-    width: 1020px;
+    max-width: 1020px;
+    width: 100%;
 }
 
 .wrapper_services {
@@ -355,9 +366,10 @@ li:first-child .point::before {
     height: 56px;
 }
 .wrapper_main {
-    width: 1020px;
+    max-width: 1020px;
+    width: 100%;
     margin: 0 auto;
-    margin-top: 7px;
+    
     background-color: #2d303a;
 }
 
@@ -434,7 +446,7 @@ nav ul li {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    width: 980px;
+    width: 980px; 
     align-content: space-between;
     margin-left:30px ;
 }
@@ -456,7 +468,8 @@ nav ul li {
 }
 
 .wrapper_about {
-    width: 1020px;
+    max-width: 1020px;
+    width: 100%;
     margin: 0 auto;
     padding-top: 59px;
     
@@ -502,7 +515,7 @@ nav ul li {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    width: 1000px;
+    width: 100%;
     align-content: space-between;
     margin-top: 44px;
     padding-bottom: 68px;
@@ -549,7 +562,8 @@ nav ul li {
 }
 
 .wrapper_footer {
-    width: 1020px;
+    max-width: 1020px;
+    width: 100%;
     padding-top: 70px;
     margin: 0 auto;
     margin-top: 1px;
@@ -814,4 +828,356 @@ footer p {
 .anchorAbout {
     width: 10px;
     height: 53px;
+}
+
+
+ @media (max-width: 1019px) {
+    header {
+        max-width: 1200px;
+        width: 100vw;
+    }
+    
+    
+    .menu li a {
+        font-weight: bold;
+    }
+
+    .slider {
+        height: 58vw;
+    }
+    #itemrespons{
+        width: 100%;
+    }
+    .slider_zone_vertical {
+        top: 10vw;
+        left: 10vw;
+    }
+
+    .slider_zone_vertical .iphone_shadow {
+        width: 180px;
+        top: 0px;
+    }
+    .iphone_box {
+        left: -2px;
+        top: 0px;
+        width: 162px;
+    }
+    .iphone_picture {
+        top: 47px;
+        left: 8px;
+        width: 144px;
+    }
+    .slider_zone_horizontal {
+        left: 42vw;
+        top: 20vw;
+    }
+    .slider_zone_horizontal .iphone_shadow {
+        height: 180px;
+    }
+    .iphone_box_hor {
+        height: 162px;
+        left: -2px;
+        top: -1px;
+    }
+    .iphone_picture_hor {
+        left: 42px;
+        top: 8px;
+        height: 144px;
+    }
+
+    
+    
+    .wrapper_services {
+        width: 90%;
+    }
+    .serv_list {
+        width: 105%;
+        justify-content: space-around;
+    }
+    .serv_item {
+        width: 300px;
+        margin-right: 50px;
+    }
+
+    .wrapper_main_header {
+        margin: 0 auto;
+        width: 688px;
+    }
+    
+    
+    .main_img {
+        width: 725px;
+        margin: 0 auto;
+        
+    }
+
+    .people_container {
+        justify-content: space-around;
+    }
+
+    .people {
+        width: 219px ;
+    }
+
+
+    .people_container .pplimg {
+        width: 25vw;
+    }
+    .info {
+        width: 95%;
+    }
+    .info_area {
+        width: 250%;
+    }
+    form {
+        width: 103%;
+    }
+    .info_area input {
+        width: 100%;
+    }
+    .info_area textarea {
+        width: 100%;
+    }
+    .info_txt {
+        margin-right: 30px;
+        margin-left: 50px;
+    }
+    
+} 
+
+@media (max-width: 767px) {
+    .logo {
+        display: flex;
+        align-items: center;
+        width: auto;
+        margin: 0px 0 2px 0px;
+    }
+    .logo.active {
+        position: absolute;
+        z-index: 200;
+        left: 20%;
+        top: 20px;
+    }
+
+    header {
+        justify-content: center;
+        max-width: 767px;
+    }
+    
+    .menu {
+        padding-right: 0px;
+        padding-top: 0px;
+        left: 0;
+        top: 0;
+        position: fixed;
+
+        
+
+    }
+    .menu ul {
+        justify-content: normal;
+        display: block;
+        
+       
+    }
+    .menu ul li:not(:first-child) {
+        margin-bottom: 20%;
+        margin-left: 10%;
+        display: none;
+        
+    }
+
+    .tagmenu {
+        display: none;
+    }
+
+    .menu ul li:nth-child(2){
+        padding-top: 50%;
+    }
+    
+    .menu li a {
+        font-size: 25px;
+    }
+    .logo {
+        order: 1;
+    }
+    #burger {
+        display: block;
+        
+        position: absolute;
+        top: 30px;
+        cursor: pointer;
+        transition: transform .8s ease-in-out; 
+        left: 25px;
+    }
+
+    /* #burger:hover {
+        
+        transform:rotate(90deg);
+    } */
+
+    .clicked {
+        left: 0px;
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(0, 0, 0, 0.5);
+        top: 0px;
+    }
+
+    .ulclicked {
+        background-color: #2D303A;
+        width: 60vw;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .point::before {
+        display: none;
+    }
+    .slider_zone_vertical {
+        top: 7vw;
+        left: 11vw;
+    }
+    .slider_zone_horizontal {
+        left: 42vw;
+        top: 18vw;
+    }
+   
+
+    .slider_zone_vertical .iphone_shadow {
+        width: 88px;
+       
+    }
+    .iphone_box {  
+        width: 80px;
+    }
+    .iphone_picture {
+        top: 23px;
+        left: 3px;
+        width: 71px;
+    }
+
+    .slider_zone_horizontal .iphone_shadow {
+        height: 88px;
+    }
+    .iphone_box_hor {
+        height: 80px;
+    }
+    .iphone_picture_hor {
+        height: 71px;
+        left: 20px;
+        top: 3px;
+    }
+    .slider_left {
+        
+        left: 3%;
+    }
+    .slider_right {
+        
+        left: 92%;
+    }
+    .serv_item {
+        
+        margin-right: 40px;
+    }
+    .wrapper_main_header {
+        width: 330px;
+    }
+    .main_img {
+        width: 350px;
+    }
+    .main_img img {
+        width:151px ;
+        margin: 5px;
+    }
+
+    .main_img img:nth-child(9) {
+        display: none;
+    }
+    .main_img img:nth-child(10) {
+        display: none;
+    }
+    .main_img img:nth-child(11) {
+        display: none;
+    }
+    .main_img img:nth-child(12) {
+        display: none;
+    }
+
+    .wrapper_about_container {
+        margin-left: 30px;
+    }
+    .wrapper_about p {
+        width: 315px ;
+    }
+    .people_container {
+        justify-content: flex-start;
+    }
+    .people_container .pplimg {
+        width: 83vw;
+    }
+    .people {
+        width: 100%;
+        margin-bottom: 34px ;
+    }
+    .people_linkd {
+        margin-top: 0px;
+    }
+
+    .info {
+        display: block;
+        width: 80%;
+        margin-left: 30px;
+        margin-right: 0;
+    }
+    .info_area {
+        width: 100%;
+    }
+    form {
+        width: 100%;
+    }
+    #submit {
+        width: 106%;
+    }
+    .info_txt {
+        margin: 0 0 40px 0;
+    }
+    footer p {
+        display: none;
+    }
+    footer {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 374px) {
+    .slider_zone_horizontal{
+        left: 37vw;
+    }
+    .slider_zone_vertical {
+        top: 2vw;
+        left: 9vw;
+    }
+    .slider_left {
+        left: 1%;
+    }
+    .slider_right {
+        left: 94%;
+    }
+    .main_img {
+        width: 300px;
+    }
+    #random img {
+        width: 120px;
+    }
+    .wrapper_main_header {
+        width: 100%;
+    }
+    .wrapper_about p {
+        width: 100%;
+    }
+
+    #tabs a {
+        font-size: 9px;
+    }
 }
