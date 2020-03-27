@@ -1148,6 +1148,9 @@ footer p {
     footer {
         justify-content: center;
     }
+    .fot_img {
+        margin-right: 0;
+    }
 }
 
 @media (max-width: 374px) {
